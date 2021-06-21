@@ -78,3 +78,17 @@ C# 预处理器指令
 
 因为没有这一句#define PI，所以#if (!pi) 成立？
 
+Q-49. What will be the output of the following code snippet:
+using System;
+public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("H" + 'I');
+            Console.WriteLine('h' + 'i');
+        }
+    }
+
+根据文档 (http://msdn.microsoft.com/en-us/library/x9h8tsay%28v=vs.110%29.aspx) 字符串 char 类型可以被隐性转化成整型， 字符串也没有定义操作符 +， 所以第二行打印209
+HI
+209
